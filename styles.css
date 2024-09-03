@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, rgb(21, 37, 88), rgb(39, 39, 39));
+    color: #fff;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    background-color: #352e67;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+#about-btech {
+    padding: 50px 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+#courses {
+    padding: 50px 20px;
+    animation: slideIn 1s ease-out;
+}
+
+.course-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.course {
+    margin: 15px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.course:hover {
+    transform: scale(1.1);
+}
+
+.course img {
+    width: 100px;
+    height: 100px;
+}
+
+footer {
+    padding: 20px;
+    background-color: #8B0000;
+    margin-top: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.popup {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.5s ease;
+    color: #fff;
+}
+
+.popup.show {
+    bottom: 20px;
+    opacity: 1;
+}
+.h2{
+    text-indent: 50px;
+}
+
+.a1{
+    color: rgb(0, 0, 0);
+    font-size: x-small;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #c20303; /* Light gray background for footer */
+}
+
+/* Social media section styling */
+.social-media {
+    margin-top: 20px;
+}
+
+/* Styling for the social media icons */
+.social-icon {
+    width: 50px; /* Smaller size for the icons */
+    height: 50px;
+    margin: 0 10px; /* Spacing between icons */
+    vertical-align: middle;
+}
+
+/* Hover effect for social media icons */
+.social-icon:hover {
+    opacity: 0.7; /* Slight fade effect on hover */
+}
+
+/* Text styling for social media section */
+.social-media p {
+    font-size: 16px; /* Adjust font size as needed */
+    margin-bottom: 10px; /* Space below the text */
+}
+
+
