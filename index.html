@@ -3,70 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BTECH INFO FOR FRESHERS</title>
+    <title>STUDENT BLOCK</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/128/3775/3775431.png">
-    
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to BTech Freshers Info Page</h1>
-    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><button class="nav-button active" data-tab="home"><i data-lucide="home"></i> Home</button></li>
+                <li><button class="nav-button" data-tab="courses"><i data-lucide="book-open"></i> Courses</button></li>
+                <li><button class="nav-button" data-tab="contact"><i data-lucide="phone"></i> Contact</button></li>
+            </ul>
+        </nav>
 
-    <section id="about-btech">
-        <h2 class="h2"> || HERE ARE SOME IMPORTANT KEY POINTS FOR YOU.......||</h2>
-        <p>The only way to do great work is to love what you do.</p>
-        <p>Skills are the currency of the future.</p>
-        <p>Your skill set determines your fate; don't wait for opportunities, create them.</p>
-    </section>
+        <main>
+            <section id="home" class="active">
+                <h1>Welcome to Student Portal</h1>
+                <h2 class="h2">ADMIN : H A R S H A 🗿</h2>
+                <p>Discover the world of technology and coding</p>
 
-    <section id="courses">
-        <h2>Important Courses &#9660;</h2>
-        <div class="course-container">
-            <!-- Python Course -->
-            <div class="course">
-                <img src="https://www.pngmart.com/files/7/Python-PNG-File.png" alt="Python Icon">
-                <p>Python Programming</p>
-                <a href="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/Python_Complete_Notes.pdf" target="_blank" class="a1">Download Python Notes</a>
-            </div>
-            <!-- C++ Course -->
-            <div class="course">
-                <img src="https://static-00.iconduck.com/assets.00/c-icon-456x512-ld9qap3k.png" alt="C++ Programming">
-                <p>C++ Programming</p>
-                <a href="https://cplusplus.com/files/tutorial.pdf" target="_blank" class="a1">Download C++ Notes</a>
-            </div>
-            <!-- HTML Course -->
-            <div class="course">
-                <img src="https://fronty.com/static/img/homepage/features/website-creation.png" alt="HTML Icon">
-                <p>HTML</p>
-                <a href="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/HTML_Complete_Notes.pdf" target="_blank" class="a1">Download HTML Notes</a>
-            </div>
-            <!-- C Course -->
-            <div class="course">
-                <img src="https://images.vexels.com/media/users/3/166179/isolated/preview/b83d6b47a9502dfaf535087627a8bf96-c-programming-language-icon.png" alt="C Programming">
-                <p>C Programming</p>
-                <a href="https://www.vssut.ac.in/lecture_notes/lecture1424354156.pdf" target="_blank" class="a1">Download C Notes</a>
-            </div>
-            <!-- JavaScript Course -->
-            <div class="course">
-                <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png" alt="JavaScript Icon">
-                <p>JavaScript</p>
-                <a href="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/JS_Chapterwise_Notes.pdf" target="_blank" class="a1">Download JavaScript Notes</a>
+                <button id="pencil-button" class="icon-button">
+                    <i data-lucide="pencil"></i>
+                </button>
+                <ul id="home-points">
+                    <li>Explore cutting-edge technologies</li>
+                    <li>Learn from industry experts</li>
+                    <li>Build real-world projects</li>
+                    <li>Enhance your career prospects</li>
+                </ul>
+            </section>
+
+            <section id="courses">
+                <h2>Top Programming Languages Full Notes </h2>
+                <div class="course-grid">
+                    <div class="course">
+                        <img src="https://images.vexels.com/media/users/3/166179/isolated/preview/b83d6b47a9502dfaf535087627a8bf96-c-programming-language-icon.png" >
+                        <h3>C Language </h3>
+                        <a href="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/Python_Complete_Notes.pdf" class="download-button" download>
+                            <i data-lucide="download"></i> Download
+                        </a>
+                    </div>
+                    <div class="course">
+                        <img src="https://static-00.iconduck.com/assets.00/c-icon-456x512-ld9qap3k.png">
+                        <h3>C++</h3>
+                        <a href="https://cplusplus.com/files/tutorial.pdf" class="download-button" download>
+                            <i data-lucide="download"></i> Download
+                        </a>
+                    </div>
+                    <div class="course">
+                        <img src="https://www.pngmart.com/files/7/Python-PNG-File.png">
+                        <h3>Python</h3>
+                        <a href="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/Python_Complete_Notes.pdf" class="download-button" download>
+                            <i data-lucide="download"></i> Download
+                        </a>
+                    </div>
+                    <div class="course">
+                        <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png">
+                        <h3>Java Script</h3>
+                        <a href="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/JS_Chapterwise_Notes.pdf" class="download-button" download>
+                            <i data-lucide="download"></i> Download
+                        </a>
+                    </div>
+                    <div class="course">
+                        <img src="https://fronty.com/static/img/homepage/features/website-creation.png" >
+                        <h3>HTML</h3>
+                        <a href="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/HTML_Complete_Notes.pdf" class="download-button" download>
+                            <i data-lucide="download"></i> Download
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us for any queries or support.</p>
+                <p> SOURCE CODE AVIL IN (github) CHECK IT OUT  </p>
+                <p class="p1">
+                    7     7     7 
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/harsha__reddy_777" target="_blank" rel="noopener noreferrer" class="icon-button">
+                        <i data-lucide="instagram"></i>
+                    </a>
+                    <a href="https://github.com/Harshapyt" target="_blank" rel="noopener noreferrer" class="icon-button">
+                        <i data-lucide="github"></i>
+                    </a>
+                    <a href="https://wa.me/qr/RULXMNSQNAVIP1" target="_blank" rel="noopener noreferrer" class="icon-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <div id="importance-modal" class="modal">
+            <div class="modal-content">
+                <h2>Importance of B.Tech and Coding</h2>
+                <ul>
+                    <li>B.Tech provides comprehensive technical knowledge</li>
+                    <li>Coding enhances problem-solving skills</li>
+                    <li>Both open up diverse career opportunities</li>
+                    <li>They foster innovation and creativity</li>
+                    <li>Essential for the digital age workforce</li>
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
 
-    <footer>
-        <p class="f1">Thank you for visiting our Student Web Page!</p>
-        <p>FOLLOW FOR MORE INFO &#9660;</p>
-        <div class="social-media">
-            <a href="https://www.instagram.com/harsha__reddy_777/" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon">
-            </a>
-            <a href="https://github.com/Harshapyt" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" class="social-icon">
-            </a>
-        </div>
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
