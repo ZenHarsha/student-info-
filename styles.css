@@ -233,3 +233,33 @@ footer {
     color: red;
     font-size: large;
 }
+.videos{
+    color: #0d70d2;
+}
+.font{
+    font-size: larger;
+    color: #00f2ff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000; 
+}
+
+.course {
+    display: inline-block; /* Aligns iframes side by side */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    overflow: hidden; /* Prevents overflow during the zoom effect */
+}
+
+.course:hover {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+}
+
+.course iframe {
+    display: block; /* Removes the gap under the iframe */
+    width: 100%; /* Make iframe responsive */
+    height: 100%; /* Make iframe responsive */
+}
+.red{
+    color: #b10000;
+    font-size: medium;
+}
+
