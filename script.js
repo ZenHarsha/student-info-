@@ -58,4 +58,24 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.transition = 'opacity 0.5s, transform 0.5s';
         courseObserver.observe(card);
     });
+
+    document.getElementById('save-name').addEventListener('click', function() {
+    var name = document.getElementById('name').value;
+    if (name) {
+        localStorage.setItem('userName', name);
+        document.getElementById('display-name').textContent = 'Welcome, ' + name + '!';
+    }
 });
+
+// Display the saved name if it's already in localStorage
+window.onload = function() {
+    var savedName = localStorage.getItem('userName');
+    if (savedName) {
+        document.getElementById('display-name').textContent = 'Welcome, ' + savedName +  +'!';
+    }
+};
+
+
+    
+});
+
