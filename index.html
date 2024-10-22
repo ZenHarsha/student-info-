@@ -175,10 +175,68 @@
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BF4DCWS7Q8"></script>
-<script src= "script.js"></script>
-  
+        document.addEventListener('DOMContentLoaded', function() {
+            const nameInput = document.getElementById('nameInput');
+            const submitName = document.getElementById('submitName');
+            const nameDisplay = document.getElementById('nameDisplay');
+            const nameInputContainer = document.querySelector('.name-input-container');
+            const container = document.querySelector('.container');
+            const navButtons = document.querySelectorAll('.nav-button');
+            const sections = document.querySelectorAll('main section');
+            const pencilButton = document.getElementById('pencil-button');
+            const importanceModal = document.getElementById('importance-modal');
+
+            
+            submitName.addEventListener('click', function() {
+                const name = nameInput.value.trim();
+                if (name) {
+                    nameDisplay.textContent = `Welcome, ${name}!`;
+                    nameDisplay.style.right = '20px';
+                    nameInputContainer.style.opacity = '0';
+                    setTimeout(() => {
+                        nameInputContainer.style.display = 'none';
+                        container.style.display = 'block';
+                        setTimeout(() => {
+                            container.style.opacity = '1';
+                        }, 50);
+                    }, 500);
+                }
+            });
+
+            nameInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    submitName.click();
+                }
+            });
+
+            navButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const tab = this.getAttribute('data-tab');
+                    navButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    sections.forEach(section => {
+                        section.classList.remove('active');
+                        if (section.id === tab) {
+                            section.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            pencilButton.addEventListener('click', function() {
+                importanceModal.style.display = 'block';
+            });
+
+            importanceModal.addEventListener('click', function(event) {
+                if (event.target === importanceModal) {
+                    importanceModal.style.display = 'none';
+                }
+            });
+
+            // Initialize Lucide icons
+            lucide.createIcons();
+        });
+    </script>
 </body>
 
 </html>
