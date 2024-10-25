@@ -558,26 +558,39 @@ main section.active {
 
 
 
-/* Keyframes for fading in and out */
 @keyframes fadeInOut {
     0%, 100% {
-      opacity: 0;                /* Fully transparent at the start and end */
-      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Minimal glow */
+      opacity: 0;                
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
     }
     50% {
-      opacity: 1;                /* Fully visible at the midpoint */
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Stronger glow in the middle */
+      opacity: 1;                
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); 
     }
   }
   
-  /* Styling for the fade-in, fade-out effect with soft glow */
   .h1 {
-    font-family: 'Arial', sans-serif;        /* Simple, clean font */
-    font-size: 3em;                          /* Adjust the size as needed */
-    color: #ffffff;                          /* White text color */
-    text-align: center;                      /* Center the text */
-    animation: fadeInOut 6s infinite;        /* Apply the animation, lasting 6 seconds */
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Soft glow by default */
-    transition: text-shadow 0.5s ease;       /* Smooth transition for glow effect */
+    font-family: 'Arial', sans-serif;      
+    font-size: 3em;                         
+    color: #ffffff;                          
+    text-align: center;                    
+    animation: fadeInOut 6s infinite;      
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    transition: text-shadow 0.5s ease;       
   }
-  
+
+.container {
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.icon-button {
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center; 
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer; 
+    margin-top: 10px; 
+    font-size: 24px; 
+}
