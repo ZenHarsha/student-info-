@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +9,9 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+   
+
     <div id="particles-js"></div>
     <h1 class="h1">Welcome To Student Block </h1>
     
@@ -35,9 +35,8 @@
 
         <main>
             <section id="home" class="active">
-                <h1>Welcome to Student Block</h1>
+                <h1>Welcome to Student Portal</h1>
                 <h2 class="h2">ADMIN : H A R S H A 🗿</h2>
-                <h3 class="h2">"upgrade your coding skills."</h3>
                 <p>Discover the world of technology and coding</p>
                 <button id="pencil-button" class="icon-button">
                     <i data-lucide="pencil"></i>
@@ -49,35 +48,24 @@
                     <li>Enhance your career prospects</li>
                 </ul>
             </section>
+    <section id="videos">
+        <h1 class="videos">TOP-NOTCH FREE RESOURCES</h1>
+        <div class="language-selector">
+            <label for="language-select">Select Language:</label>
+            <select id="language-select">
+                <option value="english">English</option>
+                <option value="telugu">Telugu</option>
+            </select>
+        </div>
+        <div id="video-container">
+            <!-- Video iframes will be dynamically inserted here -->
+        </div>
+        <h1 class="red">D I S C L A I M E R:</h1>
+        <h2 class="red">CREDIT's GOES TO RESPECTIVE OWNERS</h2>
+    </section>
 
-            <section id="videos">
-                <h1 class="videos">TOP-NOTCH FREE RESOURCES</h1>
-                <p class="font">FULL C - LANGUAGE COURSE</p>
-                <iframe class="course" width="450" height="300"
-                    src="https://www.youtube.com/embed/pdPRdhify1Q"
-                    title="YouTube video player" frameborder="10"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-                <h1 class="font">P Y T H O N FULL COURSE</h1>
-                <iframe class="course" width="450" height="300"
-                    src="https://www.youtube.com/embed/fHKPQEVCX-s"
-                    title="YouTube video player" frameborder="10"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-                <h1 class="font">J A V A FULL COURSE</h1>
-                <iframe class="course" width="450" height="300"
-                    src="https://www.youtube.com/embed/videoseries?list=PLsyeobzWxl7pe_IiTfNyr55kwJPWbgxB5"
-                    title="YouTube Playlist Player" frameborder="10"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-                <h1 class="red">D I S C L A I M E R:</h1>
-                <h2 class="red">CREDIT's GOES TO RESPECTIVE OWNERS</h2>
-            </section>
-
-            <section id="courses">
+    <!-- ... (keep the rest of the body content) ... -->
+    <section id="courses">
                 <h2>Top Programming Languages Full Notes</h2>
                 <div class="course-grid">
                     <div class="course">
@@ -182,79 +170,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EJ9DTG3YVH"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const nameInput = document.getElementById('nameInput');
-            const submitName = document.getElementById('submitName');
-            const nameDisplay = document.getElementById('nameDisplay');
-            const nameInputContainer = document.querySelector('.name-input-container');
-            const container = document.querySelector('.container');
-            const navButtons = document.querySelectorAll('.nav-button');
-            const sections = document.querySelectorAll('main section');
-            const pencilButton = document.getElementById('pencil-button');
-            const importanceModal = document.getElementById('importance-modal');
-
-            
-            submitName.addEventListener('click', function() {
-                const name = nameInput.value.trim();
-                if (name) {
-                    nameDisplay.textContent = `Welcome, ${name}!`;
-                    nameDisplay.style.right = '20px';
-                    nameInputContainer.style.opacity = '0';
-                    setTimeout(() => {
-                        nameInputContainer.style.display = 'none';
-                        container.style.display = 'block';
-                        setTimeout(() => {
-                            container.style.opacity = '1';
-                        }, 50);
-                    }, 500);
-                }
-            });
-
-            nameInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    submitName.click();
-                }
-            });
-
-            navButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const tab = this.getAttribute('data-tab');
-                    navButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                    sections.forEach(section => {
-                        section.classList.remove('active');
-                        if (section.id === tab) {
-                            section.classList.add('active');
-                        }
-                    });
-                });
-            });
-
-            pencilButton.addEventListener('click', function() {
-                importanceModal.style.display = 'block';
-            });
-
-            importanceModal.addEventListener('click', function(event) {
-                if (event.target === importanceModal) {
-                    importanceModal.style.display = 'none';
-                }
-            });
-
-            // Initialize Lucide icons
-            lucide.createIcons();
-        });
-        // google stream 
-
-        <!-- Google tag (gtag.js) -->
-
-            window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EJ9DTG3YVH');
-    </script>
+    <!-- Link the external JavaScript file -->
+    <script src="script.js"></script>
 </body>
-
 </html>
