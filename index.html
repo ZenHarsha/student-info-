@@ -3,134 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Under Maintenance</title>
-    <style>
-        
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            font-family: 'Roboto', sans-serif;
-            background-color: #1e1e1e;
-            color: white;
-            overflow: hidden;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 48px;
-            color: #ff2600;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            animation: fadeInDown 1s ease-out;
-        }
-
-        p {
-            font-size: 20px;
-            color: #cccccc;
-            margin-bottom: 40px;
-            animation: fadeIn 1.5s ease-out;
-        }
-
-       
-        .timer {
-            font-size: 36px;
-            color: #a1736b;
-            margin-bottom: 30px;
-            animation: fadeIn 1.5s ease-out;
-        }
-
-        
-        .background {
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            top: -50%;
-            left: -50%;
-            background: radial-gradient(circle, #2b2b2b, #1e1e1e);
-            z-index: -1;
-            animation: parallaxMove 10s infinite alternate ease-in-out;
-        }
-
-        @keyframes parallaxMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(-20%, -20%); }
-        }
-
-        
-        .button {
-            display: inline-block;
-            padding: 12px 25px;
-            font-size: 18px;
-            background-color: #ff6347;
-            color: white;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-            box-shadow: 0 0 20px rgba(255, 99, 71, 0.5);
-        }
-
-        .button:hover {
-            background-color: #ff4500;
-        }
-
-        
-        @keyframes fadeInDown {
-            0% { opacity: 0; transform: translateY(-50px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-    </style>
+    <title>STUDENT BLOCK</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/8750/8750683.png" type="image/png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="background"></div>
+   
+    
+    
+
+    <div id="particles-js"></div>
+    <h1 class="h1">Welcome To Student Block </h1>
+    
+    <div class="name-input-container">
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button id="submitName">Submit</button>
+    </div>
+    
+    
+    <div id="nameDisplay"></div>
 
     <div class="container">
-        <h1>We Are Under Maintenance</h1>
-        <p>We're working hard to bring the website back online. Please check back later!</p>
+        <nav>
+            <ul>
+                <li><button class="nav-button active" data-tab="home"><i data-lucide="home"></i> Home</button></li>
+                <li><button class="nav-button" data-tab="courses"><i data-lucide="book-open"></i> Courses</button></li>
+                <li><button class="nav-button" data-tab="videos"><i data-lucide="video"></i> Referral-videos</button></li>
+                <li><button class="nav-button" data-tab="worksheets"><i data-lucide="file-text"></i> Worksheets</button></li>
+                <li><button class="nav-button" data-tab="contact"><i data-lucide="phone"></i> Contact</button></li>
+            </ul>
+        </nav>
 
-        <div class="timer" id="timer">00:00:00</div>
+        <main>
+            <section id="home" class="active">
+                <h1>Welcome to Student Portal</h1>
+                <h2 class="h2">ADMIN : H A R S H A 🗿</h2>
+                <p>Discover the world of technology and coding</p>
+                <button id="pencil-button" class="icon-button">
+                    <i data-lucide="pencil"></i>
+                </button>
+                <ul id="home-points">
+                   
+                </ul>
+            </section>
+    <section id="videos">
+        <h1 class="videos">TOP-NOTCH FREE RESOURCES</h1>
+        <div class="language-selector">
+            <label for="language-select">Select Language:</label>
+            <select id="language-select">
+                <option value="english">English</option>
+                <option value="telugu">Telugu</option>
+            </select>
+        </div>
+        <div id="video-container">
+            
+        </div>
+        <h1 class="red">D I S C L A I M E R:</h1>
+        <h2 class="red">CREDIT's GOES TO RESPECTIVE OWNERS</h2>
+    </section>
 
-        <a href="https://www.instagram.com/harsha__reddy_777" class="button">Contact Support</a>
+   
+    <section id="courses">
+                <h2>Top Programming Languages Full Notes</h2>
+                <div class="course-grid">
+                    <div class="course">
+                        <img src="https://images.vexels.com/media/users/3/166179/isolated/preview/b83d6b47a9502dfaf535087627a8bf96-c-programming-language-icon.png" alt="C Language">
+                        <h3>C Language</h3>
+                        <a href="https://www.vssut.ac.in/lecture_notes/lecture1424354156.pdf" class="download-button" download>
+                            <i data-lucide="download"></i> Download
+                        </a>
+                    </div>
+                    <div class="course">
+                        <img src="https://static-00.iconduck.com/assets.00/c-icon-456x512-ld9qap3k.png" alt="C++">
+                        <h3>C++</h3>
+                        <a href="https://cplusplus.com/files/tutorial.pdf" class="download-button" download>
+                            <i data-lucide="download"></i> Download
+                        </a>
+                    </div>
+                    <div class="course">
+                        <img src="https://www.pngmart.com/files/7/Python-PNG-File.png" alt="Python">
+                        <h3>Python</h3>
+                        <a href="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/Python_Complete_Notes.pdf" class="download-button" download>
+                            <i data-lucide="download"></i> Download
+                        </a>
+                    </div>
+                    <div class="course">
+                        <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png" alt="JavaScript">
+                        <h3>Java Script</h3>
+                        <a href="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/JS_Chapterwise_Notes.pdf" class="download-button" download>
+                            <i data-lucide="download"></i> Download
+                        </a>
+                    </div>
+                    <div class="course">
+                        <img src="https://fronty.com/static/img/homepage/features/website-creation.png" alt="HTML">
+                        <h3>HTML</h3>
+                        <a  href="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/HTML_Complete_Notes.pdf" class="download-button" download>
+                            <i data-lucide="download"></i> Download
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h1>BASIC QUESTION MOST IMP:</h1>
+                    <div class="course">
+                        <img src="https://www.wordclouds.com/pics/logo-fb-en.png" alt="Interview Questions">
+                        <h3>Interview Questions Basic</h3>
+                        <a href="https://docs.google.com/document/d/1fdy9CxUGPVkmHvlS1Se6WiUt77MmPf5-/edit?usp=sharing&ouid=113231269125152526935&rtpof=true&sd=true" class="download-button" download>
+                            <i data-lucide="download"></i> Download
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="worksheets">
+                <h1 class="red"> HEAR ARE THE TOP WORK SHEETS TO INCREASE YOUR SKILL's</h1>
+                <div class="course">
+                    <img src="https://fronty.com/static/img/homepage/features/website-creation.png" alt="HTML">
+                    <h3>HTML</h3>
+                    <a href="https://www.monroepl.org/wp-content/uploads/2016/12/HTML_Tags.pdf" class="download-button" download>
+                        <i data-lucide="download"></i> Download
+                    </a>
+                </div>
+                <div class="course">
+                        <img src="https://www.pngmart.com/files/7/Python-PNG-File.png" alt="Python">
+                        <h3>Python</h3>
+                        <a href="https://www.dropbox.com/scl/fi/84q963uef414tg8jnw069/Python_Cheatsheet_Zero_To_Mastery_V1.05-edited.pdf?rlkey=u4day815ils09c3wh9iuwoa67&st=gmf4jwqi&dl=0" class="download-button" download>
+                            <i data-lucide="download"></i> Download
+                        </a>
+                    </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us for any queries or support.</p>
+                <p>SOURCE CODE AVIL IN (github) CHECK IT OUT</p>
+                <p class="p1">7 7 7</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/harsha__reddy_777" target="_blank" rel="noopener noreferrer" class="icon-button">
+                        <i data-lucide="instagram"></i>
+                    </a>
+                    <a href="https://github.com/Harshapyt" target="_blank" rel="noopener noreferrer" class="icon-button">
+                        <i data-lucide="github"></i>
+                    </a>
+                    <a href="https://wa.me/qr/RULXMNSQNAVIP1" target="_blank" rel="noopener noreferrer" class="icon-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <div id="importance-modal" class="modal">
+            <div class="modal-content">
+                <h2>Importance of B.Tech and Coding</h2>
+                <ul>
+                    <li>B.Tech provides comprehensive technical knowledge</li>
+                    <li>Coding enhances problem-solving skills</li>
+                    <li>Both open up diverse career opportunities</li>
+                    <li>They foster innovation and creativity</li>
+                    <li>Essential for the digital age workforce</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
-    <script>
-       
-        let countdownTime = 60*60 ; 
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_MEASUREMENT_ID"></script>
+    <script src="script.js"></script>
+    <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EJ9DTG3YVH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        const timerElement = document.getElementById('timer');
+  gtag('config', 'G-EJ9DTG3YVH');
+</script>
 
-        function updateTimer() {
-            const hours = Math.floor(countdownTime / 3600);
-            const minutes = Math.floor((countdownTime % 3600) / 60);
-            const seconds = countdownTime % 60;
-
-            timerElement.textContent = 
-                `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-
-            if (countdownTime > 0) {
-                countdownTime--;
-            } else {
-                clearInterval(timerInterval);
-                timerElement.textContent = "Maintenance Completed!";
-            }
-        }
-
-        const timerInterval = setInterval(updateTimer, 1000);
-    </script>
 </body>
 </html>
